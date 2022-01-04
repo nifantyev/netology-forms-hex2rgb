@@ -1,4 +1,5 @@
 import './App.css';
+import ColorViewer from './components/ColorViewer';
 import HexToRGBForm from './components/HexToRGBForm';
 
 function App() {
@@ -10,7 +11,12 @@ function App() {
     console.log('Error');
   };
 
-  return <HexToRGBForm onValidColor={handleValidColor} onError={handleError} />;
+  return (
+    <>
+      <HexToRGBForm onValidColor={handleValidColor} onError={handleError} />
+      <ColorViewer color={'#334455'} />
+    </>
+  );
 }
 
 export default App;
